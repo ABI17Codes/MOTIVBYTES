@@ -1,6 +1,6 @@
 import React from 'react'
 import IMAGES from '../assets/images'
-import { Col, Form, Image, Row } from 'react-bootstrap'
+import { Col, Container, Form, Image, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import '../Styles/YourStory.css'
 const YourStory = () => {
@@ -22,8 +22,9 @@ const YourStory = () => {
             ipsam voluptatem voluptas
           </p>
       </div>
-      <Row className="justify-content-center my-5">
-          <Col xs lg="5">
+      <Container>
+      <Row className="justify-content-center my-5 ">
+          <Col xs lg="6">
       <Form>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
         <Form.Label>Enter your name <span className="text-danger">*</span></Form.Label>
@@ -40,6 +41,7 @@ const YourStory = () => {
     </Form>
     </Col>
     </Row>
+      </Container>
     </div>
   )
 }
