@@ -24,8 +24,14 @@ const Stories = () => {
             </InputGroup>
           </Col>
         </Row>
+
+        {/* Story */}
         <Talks />
+
         {/* <Talks /> */}
+
+
+
       </Container>
     </div>
   );

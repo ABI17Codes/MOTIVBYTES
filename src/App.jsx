@@ -9,6 +9,7 @@ import Navigation from "./Components/Navigation";
 import Contact from "./Pages/Contact";
 import Footer from "./Components/Footer";
 import Stories from "./Pages/Stories";
+import Videodetails from "./Pages/Videodetails";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/yourstory" element={<YourStory />} />
           <Route path="/stories" element={<Stories />} />
+          <Route path="/stories/videodetails" element={<Videodetails />} />
         </Routes>
          <Footer/>
       </BrowserRouter>

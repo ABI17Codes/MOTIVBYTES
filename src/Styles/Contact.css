@@ -13,9 +13,9 @@
 }
 h5 .texctdec{
     text-decoration: none;
-    color: rgb(61, 255, 3);
+    color: rgb(3, 58, 255);
     transition: all .6s ease-in-out;
 }
 .texctdec:hover{
-    color: rgb(0, 140, 255);
+    color: #0634d0;
 }

@@ -8,10 +8,10 @@ const Contact = () => {
   return (
     <div>
       <div className="aboutbgimage text-center">
-        <h2 className="text-center text-white pt-4">Contact Us</h2>
+        <h2 className="text-center text-white pt-4 fw-bold">Contact Us</h2>
         <div className="d-flex justify-content-center align-items-center my-3">
           <h5>
-            <Link className="texctdec" to="/">
+            <Link className="texctdec fw-bold" to="/">
               Home
             </Link>
           </h5>

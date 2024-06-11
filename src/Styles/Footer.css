@@ -3,11 +3,21 @@
     font-weight: bold;
     display: inline-block;
 }
-.footer-list li .texctdec:hover{
-    color: rgb(64, 109, 255);
-    transition: all .4s ease-in-out;
-}
 .texctdec{
     text-decoration: none;
-    color: rgb(0, 32, 194);
+    color: rgb(255, 255, 255);
 }
+.footer-list li .texctdec:hover{
+    color: rgb(158, 180, 255);
+    transition: all .4s ease-in-out;
+}
+
+h4 .texctdec{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: all .4s ease-in-out;
+}
+h4 .texctdec:hover{
+    color: rgb(158, 180, 255);
+}
+

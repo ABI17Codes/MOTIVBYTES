@@ -8,15 +8,15 @@ const Footer = () => {
   return (
     <div>
       {/* style={{backgroundColor:"#dee8ff"}} */}
-      <div>
+      <div style={{backgroundColor:"#0034c7"}}>
         <Container className="py-4">
           <Row xs={1} md={2} lg={4}>
             <Col>
-              <h5>
-                <Link className="texctdec fw-bold" to="#">
+              <h4>
+                <Link className="texctdec fw-bold" to="/">
                   MOTIVBYTES
                 </Link>
-              </h5>
+              </h4>
             </Col>
             <Col>
               <ul className="footer-list">
@@ -82,6 +82,15 @@ const Footer = () => {
                       src={IMAGES.footerarrow}
                     />
                     X (Twitter)
+                  </Link>
+                </li><li className="py-2">
+                  <Link className="texctdec" to="#">
+                    <Image
+                      className="mx-2"
+                      width={"25px"}
+                      src={IMAGES.footerarrow}
+                    />
+                    Youtube
                   </Link>
                 </li>
               </ul>
