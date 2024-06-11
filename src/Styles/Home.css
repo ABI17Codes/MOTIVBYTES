@@ -1,0 +1,22 @@
+
+p .texctdec{
+    text-decoration: none;
+    color: rgb(0, 25, 147);
+    transition: all .3s ease-in-out;
+    
+}
+.texctdec:hover{
+    color: rgb(0, 108, 197);
+}
+
+
+
+
+
+
+
+
+
+
+
+
