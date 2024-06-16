@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import "../Styles/Footer.css";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import IMAGES from "../assets/images";
+import { UserContext } from "../Context/UserContext";
 
-const Footer = () => {
+function Footer(){
+  const {user} = useContext(UserContext);
+  // const user = true;
+
   return (
     <div>
       {/* style={{backgroundColor:"#dee8ff"}} */}
-      <div style={{backgroundColor:"#0034c7"}}>
+      <div style={{ backgroundColor: "#003deb" }}>
         <Container className="py-4">
           <Row xs={1} md={2} lg={4}>
             <Col>
@@ -83,7 +87,8 @@ const Footer = () => {
                     />
                     X (Twitter)
                   </Link>
-                </li><li className="py-2">
+                </li>
+                <li className="py-2">
                   <Link className="texctdec" to="#">
                     <Image
                       className="mx-2"
@@ -98,14 +103,33 @@ const Footer = () => {
             <Col>
               <ul className="footer-list">
                 <li className="py-2">
-                  <Link className="texctdec" to="/yourstory">
-                    <Image
-                      className="mx-2"
-                      width={"25px"}
-                      src={IMAGES.footerarrow}
-                    />
-                    Become a Speaker
-                  </Link>
+                  {user ? (
+                    <Link className="texctdec" to="/yourstory">
+                      <Image
+                        className="mx-2"
+                        width={"25px"}
+                        src={IMAGES.footerarrow}
+                      />
+                      Become a Speaker
+                    </Link>
+                  ) : (
+                    <Link
+                      className="texctdec"
+                      to="#"
+                      onClick={() => {
+                        alert(
+                          "If you want Become a Speaker, Please Login First"
+                        );
+                      }}
+                    >
+                      <Image
+                        className="mx-2"
+                        width={"25px"}
+                        src={IMAGES.footerarrow}
+                      />
+                      Become a Speaker
+                    </Link>
+                  )}
                 </li>
                 <li className="py-2">
                   <Link className="texctdec" to="/stories">

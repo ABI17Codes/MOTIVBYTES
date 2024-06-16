@@ -3,9 +3,9 @@ import { Col, Container, Image, Row } from 'react-bootstrap'
 
 const Reviews = () => {
   return (
-    <div style={{backgroundColor:'#dee8ff'}}>
+    <div style={{backgroundColor:'#b7cdff'}}>
         <Container >
-        <h2 className='text-center pt-5'>What they say about us</h2>
+        <h2 className='text-center pt-5 fw-bold'>What they say about us</h2>
             <Row xs={1} md={2} lg={3} className="text-center py-5">
                 
                 <Col  className="bg-white rounded p-5">

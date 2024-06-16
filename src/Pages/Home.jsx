@@ -1,52 +1,49 @@
 import React from "react";
-import { Button, Col, Container, Form, Image, Row } from "react-bootstrap";
-// import { ReactTyped } from "react-typed";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import Talks from "../Components/Talks";
 import Speakers from "../Components/Speakers";
 import IMAGES from "../assets/images.jsx";
 import Reviews from "../Components/Reviews.jsx";
 import Newsletter from "../Components/Newsletter.jsx";
 import { Link } from "react-router-dom";
-import '../Styles/Home.css'
+import "../Styles/Home.css";
+import ReactPlayer from "react-player";
 
 const Home = () => {
   return (
     <>
-      <Image style={{ width: "100%" }} src={IMAGES.banner} />
+      <Container fluid className="text-center m-0 p-0">
+        <ReactPlayer
+          url={IMAGES.banner}
+          playing={true}
+          loop={true}
+          controls={false}
+          width="640"
+          height="360"
+        />
+      </Container>
+
       <Container>
         <section>
           <h5 className="mt-3 fw-bold bg-success d-inline-block rounded-pill p-md-3 p-2 text-light">
             Trending Talks
           </h5>
-
-
+          {/* few video shown in the home page */}
           <Talks />
-
-<section>
-  <div className="text-center my-5 ">
-    <p><Link className="texctdec fw-bold border rounded-pill p-3" to='/stories'>View More Videos...</Link></p>
-  </div>
-</section>
-
+          {/* navigate to stories */}
+          <section>
+            <div className="text-center my-5 ">
+              <p>
+                <Link
+                  className="texctdec fw-bold border rounded-pill p-3"
+                  to="/stories"
+                >
+                  View More Videos...
+                </Link>
+              </p>
+            </div>
+          </section>
         </section>
-        {/* <div>
-          <h2 className="text-center">
-            {" "}
-            <ReactTyped
-              strings={[
-                "Action is the foundational key to all success.",
-                "The best way to predict the future is to create it.",
-                "The question isn’t who is going to let me; it’s who is going to stop me.",
-                "The secret of getting ahead is getting started.",
-              ]}
-              typeSpeed={60}
-              loop
-              backSpeed={20}
-              cursorChar=">"
-              showCursor={true}
-            />
-          </h2>
-        </div> */}
       </Container>
 
       <section>
@@ -113,9 +110,7 @@ const Home = () => {
       <Reviews />
 
       {/* Subscribe our newsletter */}
-      <Newsletter/>
-
-      
+      <Newsletter />
     </>
   );
 };

@@ -1,13 +1,13 @@
 import React from "react";
 import { Col, Container, Form, Image, InputGroup, Row } from "react-bootstrap";
-import IMAGES from "../assets/images";
+// import IMAGES from "../assets/images";
 import Talks from "../Components/Talks";
 
 const Stories = () => {
   return (
     <div>
       <Container>
-        <Row className="justify-content-center">
+        {/* <Row className="justify-content-center">
           <Col xs lg="4">
             <InputGroup className="my-3">
               <Form.Control
@@ -23,9 +23,11 @@ const Stories = () => {
               />
             </InputGroup>
           </Col>
-        </Row>
+        </Row> */}
 
         {/* Story */}
+
+        
         <Talks />
 
         {/* <Talks /> */}

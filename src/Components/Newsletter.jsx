@@ -4,7 +4,7 @@ import { Button, Form } from 'react-bootstrap'
 const Newsletter = () => {
   return (
     <div>
-        <div className="text-center" style={{backgroundColor:'#0010c8'}}>
+        <div className="text-center" style={{backgroundColor:'#000c98'}}>
           <h5 className="fw-bold pt-5 text-white">
             Need More <i className="text-decoration-underline">MOTIVATIONAL</i> Content
             <br /> Subscribe Our Newsletter

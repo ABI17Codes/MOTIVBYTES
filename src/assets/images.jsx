@@ -1,4 +1,4 @@
-import banner from "./banner.png";
+
 import leadership from "./leadership.png";
 import improvement from "./improvement.png";
 import ManageTime from "./ManageTime.png";
@@ -12,10 +12,11 @@ import next from './next.png'
 import footerarrow from './footerarrow.png'
 import aboutbg from './aboutbg.jpg'
 import search from './search.png'
+import user from './user.png'
+import banner from './banner.mp4'
 
 
 const IMAGES = {
-    banner, 
     leadership,
     improvement,
     ManageTime,
@@ -28,7 +29,9 @@ const IMAGES = {
     aboutbg,
     next,
     footerarrow,
-    search
+    search,
+    user,
+    banner
 }
 
 export default IMAGES
