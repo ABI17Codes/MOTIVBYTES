@@ -64,6 +64,7 @@ const Videodetails = () => {
       // setComments(res.data);
       setComments([...comments, res.data]);
       setPostComment("");
+      // fetchComments();
       // window.location.reload(true)
     } catch (error) {
       console.error("Error posting comment:", error);
@@ -195,7 +196,7 @@ const Videodetails = () => {
                   </Form>
                   <hr className="bg-dark border-3 border-top border-dark" />
                   {comments.map((c) => (
-                    <div key={c.id} className="d-flex gap-2">
+                    <div key={c._id} className="d-flex gap-2">
                       <Image
                         width={"35px"}
                         height={"35px"}

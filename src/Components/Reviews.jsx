@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Container, Image, Row } from 'react-bootstrap'
+import IMAGES from '../assets/images.jsx'
 
 const Reviews = () => {
   return (
@@ -14,7 +15,7 @@ const Reviews = () => {
                   bibendum arcu vitae. "
                 </p>
                 <p>______</p>
-                <Image width={"52px"} className='rounded-circle' src="https://assetwp.droitlab.com/wp-content/uploads/2022/10/Img-7.jpg"/>
+                <Image width={"52px"} className='rounded-circle' src={IMAGES.img}/>
                 </Col>
                 <Col className="bg-white rounded p-5">
                 <p>
@@ -22,7 +23,7 @@ const Reviews = () => {
                   bibendum arcu vitae. "
                 </p>
                 <p>______</p>
-                <Image width={"52px"} className='rounded-circle' src="https://assetwp.droitlab.com/wp-content/uploads/2022/10/Img-7.jpg"/>
+                <Image width={"52px"} className='rounded-circle' src={IMAGES.img}/>
                 </Col>
                 <Col className="bg-white rounded p-5">
                 <p>
@@ -30,7 +31,7 @@ const Reviews = () => {
                   bibendum arcu vitae. "
                 </p>
                 <p>______</p>
-                <Image width={"52px"} className='rounded-circle' src="https://assetwp.droitlab.com/wp-content/uploads/2022/10/Img-7.jpg"/>
+                <Image width={"52px"} className='rounded-circle' src={IMAGES.img}/>
                 </Col>
                
             </Row>

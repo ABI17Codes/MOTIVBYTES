@@ -1,5 +1,6 @@
 import React from 'react'
 import { Col, Container, Image, Row } from 'react-bootstrap'
+import IMAGES from '../assets/images.jsx'
 
 const Ourteam = () => {
   return (
@@ -12,28 +13,28 @@ const Ourteam = () => {
       <Col className="p-4">
         <Image
           className="rounded w-100"
-          src="https://assetwp.droitlab.com/wp-content/uploads/2022/10/Img-7.jpg"
+          src={IMAGES.img}
         />
         <p>Rafael E. Kennison</p>
       </Col>
       <Col className="p-4">
         <Image
           className="rounded w-100"
-          src="https://assetwp.droitlab.com/wp-content/uploads/2022/10/Img-7.jpg"
+          src={IMAGES.img}
         />
         <p>John T. Johnson</p>
       </Col>
       <Col className="p-4">
         <Image
           className="rounded w-100"
-          src="https://assetwp.droitlab.com/wp-content/uploads/2022/10/Img-7.jpg"
+          src={IMAGES.img}
         />
         <p>Rafael E. Kennison</p>
       </Col>  
       <Col className="p-4">
         <Image
           className="rounded w-100"
-          src="https://assetwp.droitlab.com/wp-content/uploads/2022/10/Img-7.jpg"
+          src={IMAGES.img}
         />
         <p>Rafael E. Kennison</p>
       </Col>         

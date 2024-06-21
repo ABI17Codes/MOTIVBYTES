@@ -7,7 +7,7 @@ import { UserContext } from "../Context/UserContext.jsx";
 
 function Navigation(){
   const {user} = useContext(UserContext);
-  const { id } = useParams(); 
+  // const { id } = useParams(); 
   
   return (
     <Navbar expand="lg" bg="primary" data-bs-theme="dark">
@@ -42,7 +42,7 @@ function Navigation(){
               </Nav.Link>
             )}{" "}
             {user ? (
-              <Nav.Link className="px-3 fw-bold" as={Link} to={`/profile/${user.id}`}>
+              <Nav.Link className="px-3 fw-bold" as={Link} to={`/profile/${user._id}`}>
                 Profile
               </Nav.Link>
             ) : (

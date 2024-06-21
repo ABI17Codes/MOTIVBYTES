@@ -14,6 +14,7 @@ import aboutbg from './aboutbg.jpg'
 import search from './search.png'
 import user from './user.png'
 import banner from './banner.mp4'
+import img from './img.jpg'
 
 
 const IMAGES = {
@@ -31,7 +32,8 @@ const IMAGES = {
     footerarrow,
     search,
     user,
-    banner
+    banner,
+    img
 }
 
 export default IMAGES

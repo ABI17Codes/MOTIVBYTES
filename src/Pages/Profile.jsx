@@ -10,7 +10,8 @@ import Profileposts from "../Components/Profileposts.jsx";
 function Profile() {
   const { setUser } = useContext(UserContext); 
   const [name, setName] = useState(""); 
-
+  const [count, setCount] = useState(0)
+  const { user } = useContext(UserContext);
   const navigate = useNavigate();
   const { id } = useParams(); 
 
@@ -21,8 +22,7 @@ function Profile() {
         if (id) {
           const res = await axios.get(`${URL}/profile/${id}`); 
           setName(res.data.username);
-
-          // console.log(res.data); 
+          // console.log(res); 
         }
       } catch (error) {
         console.error("Error fetching name:", error); // Log error if fetch fails
@@ -30,7 +30,24 @@ function Profile() {
     };
 
     fetchUsername(); 
-  }, [id]); // Dependency 
+  }, [id]); 
+
+// posts count
+useEffect(() => {
+const postCount = async () => {
+  try {
+  
+    const res = await axios.get(`${URL}/profile/${id}/videoCount`); 
+    // console.log(res.data);
+    setCount(res.data.count);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+  postCount();
+}, [id])
+
 
 
   // logout fuction
@@ -46,7 +63,8 @@ function Profile() {
   }
 
   return (
-    <>
+<>
+{user ?     <>
       <Container>
         <Row className="text-center my-3 ">
           <Col className="d-flex align-items-center justify-content-center gap-5 my-3">
@@ -57,7 +75,11 @@ function Profile() {
                 className="rounded-circle"
                 src={IMAGES.user}
               />
-              <p className="fw-bold">{name}</p>
+              <h5 className="fw-bold pt-2">{name}</h5>
+            </div> 
+            <div>
+              <h5 className="fw-bold">Posts</h5>
+              <h5 className="fw-bold">{count}</h5>
             </div>
             <Button variant="danger" onClick={handleLogout}>
               Logout
@@ -66,7 +88,8 @@ function Profile() {
         </Row>
       </Container>
       <Profileposts />
-    </>
+    </> : <h2>Please login first</h2>}
+</>
   );
 }
 

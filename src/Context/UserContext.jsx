@@ -9,7 +9,7 @@ export const UserContext=createContext({})
 
 
 export function UserContextProvider({children}){
-    const [user,setUser]=useState({})
+    const [user,setUser]=useState(false)
 
     useEffect(()=>{
       getUser()
@@ -17,7 +17,7 @@ export function UserContextProvider({children}){
 
     const getUser = async ()=>{
       try{
-        const res = await axios.get(` ${URL}/refetch`,{withCredentials:true})
+        const res = await axios.get(`${URL}/refetch`,{withCredentials:true})
         setUser(res.data)
       }
       catch(err){

@@ -23,8 +23,8 @@ function YourStory() {
       title,
       videolink,
       description,
-      username:user.username,
-      userId:user.id
+      username: user.username,
+      userId: user.id
     };
     try {
       const res = await axios.post(URL + "/yourstory", formData, {
