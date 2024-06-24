@@ -17,6 +17,8 @@ const Register = () => {
 
   const navigate = useNavigate();
 
+  axios.defaults.withCredentials = true;
+
   async function hanndleRegister(e) {
     e.preventDefault();
     try {
